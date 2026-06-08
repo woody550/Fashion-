@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المحل الجديد - الهوية والتشكيلة العصرية</title>
+    <title>موضتي للأزياء والملابس النسائية | Mawdaty الهرم</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            /* تعديل الألوان لتطابق روح وديكور المحل الجديد (فخامة وعصرية) */
-            --primary-color: #1a3a5f; /* أزرق ملكي فاخر مستوحى من صورهم */
-            --accent-color: #d4af37;  /* الذهبي الأنيق الخاص بالديكور */
-            --dark-color: #111111;
-            --light-bg: #f8f9fa;
+            --bg-main: #faf8f5;       /* خلفية كريمي ناعمة مريحة جداً وعصرية */
+            --dark-royal: #111111;    /* أسود ملكي فخم للخطوط والعناصر */
+            --gold-accent: #cc9955;   /* ذهبي دافئ مستوحى من إضاءة وستاندات المحل */
+            --muted-gray: #777777;
             --white: #ffffff;
         }
 
@@ -30,234 +29,347 @@
         }
 
         body {
-            color: var(--dark-color);
-            background-color: var(--white);
-            line-height: 1.6;
+            background-color: var(--bg-main);
+            color: var(--dark-royal);
+            line-height: 1.7;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        /* الهيدر */
+        /* الهيدر وقائمة التنقل فائقة النحافة والمودرن */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.98);
+            background-color: rgba(250, 248, 245, 0.96);
+            backdrop-filter: blur(10px);
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 18px 6%;
+            max-width: 1300px;
+            margin: 0 auto;
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             font-weight: 900;
-            color: var(--primary-color);
+            letter-spacing: 1px;
+            color: var(--dark-royal);
             text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--gold-accent);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-        }
-
-        .nav-links li { margin-right: 25px; }
-
-        .nav-links a {
-            color: var(--dark-color);
-            text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent-color);
-        }
-
-        /* واجهة العرض الرئيسية للمحل الجديد */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(26, 58, 95, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 2.8rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            color: var(--white);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .btn-action {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--dark-color);
-            padding: 12px 40px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 4px;
-            transition: 0.3s ease;
-        }
-
-        .btn-action:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        /* المنتجات المستوحاة من الصور الجديدة */
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
-
-        .grid-products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
-        .card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
+        .nav-links a {
+            color: var(--dark-royal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
         }
 
-        .card img {
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background-color: var(--gold-accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
             width: 100%;
-            height: 350px;
-            object-fit: cover;
         }
 
-        .card-body {
-            padding: 20px;
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--gold-accent);
+        }
+
+        /* واجهة هيرو (Hero Section) سينمائية وبسيطة جداً تبتعد عن السبعينات */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 0 6%;
+            background: linear-gradient(to left, rgba(250,248,245,0.85) 40%, rgba(250,248,245,0.2) 100%), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop') no-repeat center right/cover;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 550px;
             text-align: right;
         }
 
-        .card-title {
-            font-size: 1.2rem;
+        .hero-tag {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-accent);
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
+            display: inline-block;
         }
 
-        .card-price {
-            color: var(--accent-color);
-            font-weight: 800;
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-royal);
+        }
+
+        .hero-content p {
             font-size: 1.1rem;
+            color: var(--muted-gray);
+            margin-bottom: 35px;
         }
 
-        /* تفاصيل التواصل والموقع الجديد الحقيقي */
-        .contact-section {
-            background-color: var(--light-bg);
+        .btn-premium {
+            display: inline-block;
+            background-color: var(--dark-royal);
+            color: var(--white);
+            padding: 14px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--dark-royal);
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        .btn-premium:hover {
+            background-color: transparent;
+            color: var(--dark-royal);
         }
 
-        .info-box {
+        /* قسم العروض الحالية (Offers) بستايل بطاقات حديث ونظيف */
+        .section-container {
+            padding: 80px 6%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             display: flex;
-            align-items: center;
-            margin-bottom: 25px;
-            background: var(--white);
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 45px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding-bottom: 15px;
         }
 
-        .info-box i {
+        .section-title-main {
             font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-left: 20px;
+            font-weight: 900;
         }
 
-        .info-details h3 {
-            font-size: 1.1rem;
+        .section-subtitle {
+            color: var(--gold-accent);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        /* شبكة عرض أزياء موضتي الحقيقية (حريمي كاجوال وخروج وعبايات) */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .product-item {
+            background-color: var(--white);
+            position: relative;
+            transition: transform 0.4s;
+        }
+
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 420px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .product-item:hover .image-wrapper img {
+            transform: scale(1.04);
+        }
+
+        .badge-discount {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--gold-accent);
+            color: var(--white);
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .product-meta {
+            padding: 20px 10px;
+            text-align: right;
+        }
+
+        .product-tag {
+            font-size: 0.8rem;
+            color: var(--muted-gray);
             margin-bottom: 5px;
         }
 
-        .info-details p { color: #666; font-size: 0.95rem; }
-
-        .map-container {
-            width: 100%;
-            height: 350px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 2px solid var(--primary-color);
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark-royal);
+            margin-bottom: 8px;
         }
 
-        .map-container iframe {
+        .price-box {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .price-new {
+            font-weight: 700;
+            color: var(--gold-accent);
+            font-size: 1.05rem;
+        }
+
+        /* تفاصيل الموقع الجغرافي الدقيق لشارع الهرم مول رويال سنتر */
+        .contact-flex {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            background-color: var(--white);
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+        }
+
+        .info-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .contact-row i {
+            font-size: 1.4rem;
+            color: var(--gold-accent);
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .contact-text h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: var(--muted-gray);
+            font-size: 0.95rem;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 380px;
+            filter: grayscale(0.2); /* مظهر مودرن للخريطة */
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .map-frame iframe {
             width: 100%;
             height: 100%;
             border: 0;
         }
 
+        /* الفوتر السفلي البسيط النظيف */
         footer {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background-color: var(--dark-royal);
+            color: #888888;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
+            padding: 30px 20px;
+            font-size: 0.85rem;
+            border-top: 1px solid #222;
         }
 
-        /* أزرار التواصل العائمة السريعة للآيفون */
-        .float-contact {
+        footer span {
+            color: var(--white);
+        }
+
+        /* أزرار الاتصال والميديا السريعة للآيفون برقم موضتي الحقيقي */
+        .quick-actions {
             position: fixed;
-            bottom: 25px;
-            left: 25px;
+            bottom: 30px;
+            left: 30px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            z-index: 1000;
+            gap: 15px;
+            z-index: 1001;
         }
 
-        .btn-float {
-            width: 54px;
-            height: 54px;
+        .action-circle {
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
         }
 
-        .whatsapp { background-color: #25d366; }
-        .phone { background-color: #007bff; }
+        .action-circle:hover {
+            transform: scale(1.08);
+        }
 
+        .ws-color { background-color: #25d366; }
+        .ph-color { background-color: #111111; }
+
+        /* التجاوب الذكي والشامل للهواتف */
         @media (max-width: 992px) {
-            .contact-grid { grid-template-columns: 1fr; }
+            .contact-flex { grid-template-columns: 1fr; gap: 35px; padding: 20px; }
+            .hero { background-position: center center; }
+            .hero-content h1 { font-size: 2.3rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* إخفاء القائمة في الموبايل لتوفير المظهر العصري البسيط */
+            .navbar { padding: 15px 5%; }
         }
     </style>
 </head>
@@ -265,74 +377,105 @@
 
     <header>
         <nav class="navbar">
-            <a href="#" class="logo">المحل الجديد للأزياء</a>
+            <a href="#" class="logo">MAWDATY<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#" class="active">الرئيسية</a></li>
-                <li><a href="#collection">التشكيلة الجديدة</a></li>
-                <li><a href="#store-info">موقع الفرع</a></li>
+                <li><a href="#offers">العروض والتشكيلة</a></li>
+                <li><a href="#location">موقع فرع الهرم</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>أهلاً بكم في فرعنا الجديد</h1>
-            <p>التصميم الفاخر والخامات الحقيقية المأخوذة من واقع صورنا لعام 2026</p>
-            <a href="#collection" class="btn-action">تصفح المنتجات الحالية</a>
+            <span class="hero-tag">جديد تشكيلة 2026</span>
+            <h1>موضتي للأزياء النسائية العصرية</h1>
+            <p>اكتشفي أرقى الموديلات والتريندات الشبابية من العبايات الفاخرة وملابس الخروج الكاجوال المتاحة حصرياً داخل فرعنا بالهرم.</p>
+            <a href="#offers" class="btn-premium">استكشفي عروض الفرع</a>
         </div>
     </section>
 
-    <section id="collection" class="container">
-        <h2 class="section-title">التشكيلة المعروضة في فرعنا الحقيقي</h2>
-        <div class="grid-products">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=400&auto=format&fit=crop" alt="منتج 1">
-                <div class="card-body">
-                    <h3 class="card-title">طقم كاجوال عصري - الطبعة الجديدة</h3>
-                    <p class="card-price">حسب أسعار الفرع الحالية</p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=400&auto=format&fit=crop" alt="منتج 2">
-                <div class="card-body">
-                    <h3 class="card-title">أزياء وموديلات كلاسيكية فاخرة</h3>
-                    <p class="card-price">خامات ممتازة 100%</p>
-                </div>
-            </div>
+    <section id="offers" class="section-container">
+        <div class="section-header">
+            <h2 class="section-title-main">العروض والقطع الأكثر طلباً</h2>
+            <span class="section-subtitle">رويال سنتر مول</span>
         </div>
-    </section>
-
-    <section id="store-info" class="contact-section">
-        <div class="container contact-grid">
-            <div>
-                <div class="info-box">
-                    <i class="fas fa-map-marked-alt"></i>
-                    <div class="info-details">
-                        <h3>موقع الفرع الجغرافي</h3>
-                        <p>العنوان الدقيق والمطابق لنقطة الخريطة التي اخترتها</p>
+        
+        <div class="grid-layout">
+            <div class="product-item">
+                <div class="image-wrapper">
+                    <span class="badge-discount">عرض خاص</span>
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=500&auto=format&fit=crop" alt="عبايات وملابس خروج موضتي">
+                </div>
+                <div class="product-meta">
+                    <p class="product-tag">ملابس خروج حريمي</p>
+                    <h3 class="product-name">طقم كاجوال عصري - خامات مستوردة فاخرة</h3>
+                    <div class="price-box">
+                        <span class="price-new">خصومات حصرية داخل الفرع الرئيسي</span>
                     </div>
                 </div>
-                <div class="info-box">
+            </div>
+
+            <div class="product-item">
+                <div class="image-wrapper">
+                    <span class="badge-discount">الأكثر مبيعاً</span>
+                    <img src="https://images.unsplash.com/photo-1549064482-6779ba329226?q=80&w=500&auto=format&fit=crop" alt="عبايات كلاسيك فاخرة موضتي">
+                </div>
+                <div class="product-meta">
+                    <p class="product-tag">عبايات واستايلات خروج</p>
+                    <h3 class="product-name">عباية كلاسيك أنيقة بتفاصيل ذهبية ناعمة</h3>
+                    <div class="price-box">
+                        <span class="price-new">أعلى جودة بأفضل سعر في شارع الهرم</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section-container" style="padding-top: 20px; padding-bottom: 100px;">
+        <div class="section-header">
+            <h2 class="section-title-main">موقع الفرع والتواصل المباشر</h2>
+            <span class="section-subtitle">تشرفنا زيارتكم</span>
+        </div>
+
+        <div class="contact-flex">
+            <div class="info-panel">
+                <div class="contact-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-text">
+                        <h3>العنوان بالتفصيل</h3>
+                        <p>257 شارع الهرم الرئيسي، داخل مول رويال سنتر (الطابق الثاني)، بجوار برجر كينج ومقابل شارع ضياء، الجيزة، مصر.</p>
+                    </div>
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="contact-text">
+                        <h3>رقم الهاتف المباشر للفرع</h3>
+                        <p>01026063360</p>
+                    </div>
+                </div>
+                <div class="contact-row">
                     <i class="fas fa-clock"></i>
-                    <div class="info-details">
-                        <h3>أوقات العمل واستقبال الزوار</h3>
-                        <p>مفتوح لخدمتكم يومياً حسب المواعيد الرسمية للمحل</p>
+                    <div class="contact-text">
+                        <h3>مواعيد العمل</h3>
+                        <p>يومياً: من الساعة 12:00 ظهراً وحتى الساعة 11:30 مساءً.</p>
                     </div>
                 </div>
             </div>
-            <div class="map-container">
-                <iframe src="Https://maps.google.com/?cid=6666205278318900692&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" loading="lazy" allowfullscreen></iframe>
+            
+            <div class="map-frame">
+                <iframe src="https://maps.google.com/maps?q=Royal%20Center%20Mall,%20Al%20Haram&t=&z=15&ie=UTF-8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 جميع الحقوق محفوظة لهوية الفرع الجديد والمطور.</p>
+        <p>© 2026 سنتر <span>موضتي للأزياء (Mawdaty)</span>. جميع الحقوق محفوظة لفرع مول رويال سنتر بالهرم.</p>
     </footer>
 
-    <div class="float-contact">
-        <a href="https://wa.me/966500000000" class="btn-float whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="tel:+966500000000" class="btn-float phone"><i class="fas fa-phone-alt"></i></a>
+    <div class="quick-actions">
+        <a href="https://wa.me/201026063360" class="action-circle ws-color" target="_blank" title="واتساب موضتي"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:01026063360" class="action-circle ph-color" title="اتصال بالفرع"><i class="fas fa-phone-alt"></i></a>
     </div>
 
 </body>
